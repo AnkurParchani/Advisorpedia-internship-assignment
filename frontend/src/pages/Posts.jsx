@@ -39,13 +39,11 @@ const Posts = () => {
       }
     }
 
-    if (isLoggedIn) {
-      if (inView && !isLoading) {
-        setPage((prevPage) => prevPage + 1);
-        getPosts();
-      }
+    if (inView && !isLoading) {
+      setPage((prevPage) => prevPage + 1);
+      getPosts();
     }
-  }, [page, inView, isLoading, navigate, setIsLoggedIn, isLoggedIn]);
+  }, [page, inView, isLoading, navigate, setIsLoggedIn]);
 
   return (
     <div className="sm:max-w-6xl max-w-xl mx-auto px-8">
